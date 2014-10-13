@@ -1,0 +1,3 @@
+[submodule "arcsyn"]
+	path = arcsyn
+	url = git@github.com:wchristian/gltut.git
