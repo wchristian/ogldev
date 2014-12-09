@@ -28,3 +28,5 @@ Makefile-Release.mk
 *.unsuccessfulbuild
 
 *.opensdf
+_Inline
+Content/*.json
