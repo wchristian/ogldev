@@ -1,0 +1,18 @@
+<h1 id="assimp2json">assimp2json</h1>
+<h4 id="json-exporter-for-open-asset-import-library">JSON exporter for Open Asset Import Library</h4>
+<p>Convert files in 40+ file format, including <strong>Collada, 3DS, OBJ, LWO, FBX, Blender, X, STL, PLY, MS3D</strong> and <strong>IFC</strong>.</p>
+<p><img alt="quak" src="http://s21.postimg.org/nu1bfiobr/dwarf22.png" /></p>
+<h3 id="introduction">Introduction</h3>
+<p><code>assimp2json</code> is a command line tool designed to expose the import capabilities of <code>assimp</code>, the <a href="http://assimp.sourceforge.net">Open Asset Import Library</a> to /Web developers. The tool takes a single 3d model as input file, imports it using <code>assimp</code> and converts the result to <code>json</code>.</p>
+<p><code>assimp2json</code> is platform-independent, its only dependency is <code>assimp</code> itself.</p>
+<h3 id="output-format">Output Format</h3>
+<p>The output format is a one-by-one translation of <a href="http://assimp.sourceforge.net/lib_html/structai_scene.html">Assimp's C datastructure</a> , with a few changes to make the resulting <code>json</code> look more natural. All fields are lower-case and the prefixes (such as m, pc, ..) are omitted. Array lengths are not written as this information is implicitly given. Empty arrays are not written at all, i.e. a node without children doesn't have an empty <code>children:[]</code> field.</p>
+<p>The <code>/samples</code> folder contains some sample JSON files.</p>
+<h3 id="build">Build</h3>
+<p>The build system for assimp2json is CMake. To build, use either the CMake GUI or the CMake command line utility. <strong>Note</strong>: make sure you pulled the <code>assimp</code> submodule, i.e. with <code>git submodule init &amp;&amp; git submodule update</code></p>
+<h3 id="usage">Usage</h3>
+<pre><code>$ assimp2json [flags] input_file [output_file] 
+</code></pre>
+
+<p>(omit the <code>output_file</code> argument to get the data on stdout)</p>
+<p>Invoke <code>assimp2json</code> with no arguments for detailed information.</p>

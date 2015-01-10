@@ -1,3 +1,6 @@
 [submodule "arcsyn"]
 	path = arcsyn
 	url = git@github.com:wchristian/gltut.git
+[submodule "assimp2json_source"]
+	path = assimp2json_source
+	url = https://github.com/wchristian/assimp2json.git
